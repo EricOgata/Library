@@ -15,7 +15,7 @@ class AuthorManagementTest extends TestCase
     /** @test */
     public function an_author_can_be_created(){
 
-        $this->withoutExceptionHandling();
+        // $this->withoutExceptionHandling();
         $this->post('/author', [
             'name'  =>  'Author Name',
             'dob'   =>  '05/14/1988',
@@ -27,5 +27,6 @@ class AuthorManagementTest extends TestCase
         $this->assertInstanceOf(Carbon::class, $author->first()->dob);
         $this->assertEquals('1988/14/05',$author->first()->dob->format('Y/d/m'));
     }
+    
     
 }

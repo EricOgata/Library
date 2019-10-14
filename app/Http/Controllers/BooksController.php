@@ -28,7 +28,7 @@ class BooksController extends Controller
         // Creates a sanitized data
         return request()->validate([
             'title'     =>  'required',
-            'author'    =>  'required'
+            'author_id'    =>  'required'
         ]);
     }
 }
